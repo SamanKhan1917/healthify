@@ -1,6 +1,9 @@
-// Add event listener to menu items
-document.querySelectorAll('.menu li').forEach((item) => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
-    });
+document.getElementById('about-button').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('about-popup').style.display = 'flex';
+});
+
+document.getElementById('close-button').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('about-popup').style.display = 'none';
 });
