@@ -1,8 +1,6 @@
-// Add event listener to Order Now button
-document.addEventListener('DOMContentLoaded', function() {
-    const orderNowButton = document.querySelector('.hero button');
-    orderNowButton.addEventListener('click', function() {
-        // Add functionality to Order Now button
-        console.log('Order Now button clicked!');
+// Add event listener to menu items
+document.querySelectorAll('.menu li').forEach((item) => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
     });
 });
