@@ -3,51 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Ordering Website</title>
+    <title>Healthify - Healthy Food Ordering</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <!-- Navbar -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Cart</a></li>
+        <nav class="navbar">
+            <div class="logo">Healthify</div>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order-history">Order History</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#nutribuddy">NutriBuddy</a></li>
+                <li><a href="#login">Login</a></li>
+                <li class="cart-icon"><a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="menu-section">
-            <h2>Menu</h2>
-            <ul class="menu">
-                <li class="menu-item responsive-menu-item">
-                    <img src="image1.jpg" alt="Menu Item 1">
-                    <h3>Menu Item 1</h3>
-                    <p>Description of Menu Item 1</p>
-                    <button>Add to Cart</button>
-                </li>
-                <li class="menu-item responsive-menu-item">
-                    <img src="image2.jpg" alt="Menu Item 2">
-                    <h3>Menu Item 2</h3>
-                    <p>Description of Menu Item 2</p>
-                    <button>Add to Cart</button>
-                </li>
-                <!-- Add more menu items here -->
-            </ul>
-        </section>
-        <section class="cart-section">
-            <h2>Cart</h2>
-            <ul>
-                <!-- Cart items will be displayed here -->
-            </ul>
-            <button>Checkout</button>
-        </section>
-        <section class="chat-interface">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="send-button">Send</button>
-            <div id="chat-log"></div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Welcome to Healthify</h1>
+            <p>Order Healthy, Live Healthy</p>
+            <button class="order-now-btn">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/multigrain-wrap.jpg" alt="Multigrain Wrap">
+                <h3>Multigrain Wrap</h3>
+                <p>Rs. 169</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/multigrain-sandwich.jpg" alt="Multigrain Sandwich">
+                <h3>Multigrain Sandwich</h3>
+                <p>Rs. 179</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <!-- Add more menu items similarly -->
+        </div>
+    </section>
+
+    <!-- Order History Section -->
+    <section id="order-history">
+        <h2>Your Order History</h2>
+        <div class="order-history-list">
+            <!-- Order history will dynamically load here -->
+        </div>
+    </section>
+
+    <!-- Checkout Page -->
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <div class="cart-items">
+                <!-- Cart items will be dynamically generated -->
+            </div>
+            <div class="total">
+                <h3>Total: Rs. <span id="total-amount">0</span></h3>
+                <button class="checkout-btn">Proceed to Payment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NutriBuddy Chatbot -->
+    <section id="nutribuddy">
+        <h2>Chat with NutriBuddy</h2>
+        <div class="chatbox">
+            <iframe
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button class="send-btn">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Healthify | All Rights Reserved</p>
+    </footer>
+
 </body>
 </html>
