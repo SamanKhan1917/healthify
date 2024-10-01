@@ -8,97 +8,112 @@
 </head>
 <body>
     <header>
-        <h1 class="welcome-title">Welcome to Healthify</h1>
+        <h1 class="banner">Welcome to Healthify</h1>
+        <p class="description">Fuel your fitness journey with every bite! At Healthify, we believe healthy eating should be as delicious as it is nutritious. Dive into our fresh menu, crafted to energize your day and tantalize your taste buds. Let's make healthy living a delightful adventure together!</p>
         <nav>
-            <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#order-history">Order History</a></li>
-                <li><a href="#checkout">Checkout</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="#menu">Menu</a>
+            <a href="#help">Help</a>
+            <a href="#order-history">Order History</a>
         </nav>
     </header>
-    
     <main>
         <section id="menu">
-            <h2>Our Menu</h2>
+            <h2 class="menu-title">Our Menu</h2>
             <div class="menu-container">
-                <div class="menu-card">
-                    <img src="multigrain-wrap.jpg" alt="Multigrain Wrap">
-                    <h3>Multigrain Wrap</h3>
-                    <p>Price: Rs. 169</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                <div class="menu-item">
+                    <img src="images/multigrain-wrap.jpg" alt="Multigrain Wrap">
+                    <h3>Multigrain Wraps</h3>
+                    <p>Rs. 169</p>
+                    <button class="add-to-cart" onclick="addToCart('Multigrain Wraps', 169)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="multigrain-sandwiches.jpg" alt="Multigrain Sandwich">
-                    <h3>Multigrain Sandwich</h3>
-                    <p>Price: Rs. 179</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                <div class="menu-item">
+                    <img src="images/multigrain-sandwich.jpg" alt="Multigrain Sandwich">
+                    <h3>Multigrain Sandwiches</h3>
+                    <p>Rs. 179</p>
+                    <button class="add-to-cart" onclick="addToCart('Multigrain Sandwiches', 179)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
+                <div class="menu-item">
+                    <img src="images/high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
                     <h3>High Protein Quinoa Salad</h3>
-                    <p>Price: Rs. 139</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 139</p>
+                    <button class="add-to-cart" onclick="addToCart('High Protein Quinoa Salad', 139)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
+                <div class="menu-item">
+                    <img src="images/chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
                     <h3>Chicken Teriyaki Salad</h3>
-                    <p>Price: Rs. 249</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 249</p>
+                    <button class="add-to-cart" onclick="addToCart('Chicken Teriyaki Salad', 249)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
+                <div class="menu-item">
+                    <img src="images/chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
                     <h3>Chicken Caesar Salad</h3>
-                    <p>Price: Rs. 259</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 259</p>
+                    <button class="add-to-cart" onclick="addToCart('Chicken Caesar Salad', 259)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="protein-smoothie.jpg" alt="Protein Smoothie">
+                <div class="menu-item">
+                    <img src="images/protein-smoothie.jpg" alt="Protein Smoothie">
                     <h3>Protein Smoothie</h3>
-                    <p>Price: Rs. 149</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 149</p>
+                    <button class="add-to-cart" onclick="addToCart('Protein Smoothie', 149)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="oatmeal-pancakes.jpg" alt="Oats Pancakes">
+                <div class="menu-item">
+                    <img src="images/oats-pancakes.jpg" alt="Oats Pancakes">
                     <h3>Oats Pancakes</h3>
-                    <p>Price: Rs. 239</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 239</p>
+                    <button class="add-to-cart" onclick="addToCart('Oats Pancakes', 239)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="crunchy-salad.jpg" alt="Crunchy Salad">
+                <div class="menu-item">
+                    <img src="images/crunchy-salad.jpg" alt="Crunchy Salad">
                     <h3>Crunchy Salad</h3>
-                    <p>Price: Rs. 119</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 119</p>
+                    <button class="add-to-cart" onclick="addToCart('Crunchy Salad', 119)">Add to Cart</button>
                 </div>
-                <div class="menu-card">
-                    <img src="tofu-bowl.jpg" alt="Crispy Tofu Bowl">
+                <div class="menu-item">
+                    <img src="images/crispy-tofu-bowl.jpg" alt="Crispy Tofu Bowl">
                     <h3>Crispy Tofu Bowl</h3>
-                    <p>Price: Rs. 149</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Rs. 149</p>
+                    <button class="add-to-cart" onclick="addToCart('Crispy Tofu Bowl', 149)">Add to Cart</button>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us!</p>
+        <section id="help">
+            <h2>Help</h2>
+            <div class="help-container">
+                <div class="nutribuddy">
+                    <h3>Meet NutriBuddy</h3>
+                    <iframe allow="microphone;" width="350" height="430"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
+                    </iframe>
+                </div>
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <p>Email: support-healthify@gmail.com</p>
+                    <p>Mobile: +917692936180</p>
+                    <p>Address: 3rd Floor, Fitness 365 Gym, above Ondoor, Janki Nagar, Chuna Bhatti, Bhopal, Madhya Pradesh 462016</p>
+                </div>
+            </div>
         </section>
 
-        <div class="chatbot">
-            <iframe
-                allow="microphone;"
-                width="350"
-                height="430"
-                src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
-            </iframe>
-        </div>
+        <section id="order-history">
+            <h2>Your Orders</h2>
+            <div id="orders-list"></div>
+        </section>
     </main>
-    
+
+    <div id="cart-popup" class="popup">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
+
     <footer>
         <p>&copy; 2024 Healthify. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
