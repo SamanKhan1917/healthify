@@ -1,118 +1,136 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0eb96; /* Bright background */
-    color: #000;
+    background-color: black; /* Main background color for the site */
+    color: white; /* Text color */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    text-align: center; /* Center text in header */
+    padding: 20px; /* Add padding */
 }
 
 .banner {
-    text-align: center;
-    background-color: #000; /* Black background for the banner */
-    color: #fff; /* White font */
-    padding: 20px;
+    background-color: #f0eb96; /* Banner background color */
+    padding: 30px; /* Padding for the banner */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    color: green; /* Font color */
+    animation: slide-in 1s ease; /* Animation effect */
 }
 
-h1 {
-    font-size: 3em;
-    color: #3cb371; /* Teal green */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: orange; /* Orange buttons */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ff4500; /* Darker orange on hover */
-}
-
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.menu-item {
-    width: 30%;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.menu-item img {
-    width: 100%; /* Responsive image */
-    height: auto;
-    animation: zoom 0.5s ease;
-}
-
-@keyframes zoom {
+/* Keyframes for slide-in animation */
+@keyframes slide-in {
     from {
-        transform: scale(1);
+        transform: translateY(-100%); /* Start off-screen */
+        opacity: 0; /* Start invisible */
     }
     to {
-        transform: scale(1.05);
+        transform: translateY(0); /* End in place */
+        opacity: 1; /* End visible */
     }
 }
 
+/* Menu container styles */
+.menu-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center content */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding for the container */
+}
+
+/* Individual menu card styles */
+.menu-card {
+    background-color: #222; /* Card background color */
+    padding: 15px; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    transition: transform 0.3s; /* Smooth transform transition */
+}
+
+/* Hover effect for menu cards */
+.menu-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Add shadow on hover */
+}
+
+.menu-card img {
+    width: 100px; /* Image width */
+    height: 100px; /* Image height */
+    object-fit: cover; /* Cover image area */
+}
+
+/* Add to cart button styles */
+.add-to-cart {
+    background-color: orange; /* Button background color */
+    color: black; /* Button text color */
+    padding: 10px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Hover effect for add to cart buttons */
+.add-to-cart:hover {
+    background-color: darkorange; /* Darker on hover */
+}
+
+/* Chatbot iframe styles */
 .chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-}
-
-.login-page {
-    background-color: navy; /* Navy blue background for login */
-}
-
+/* Login page styles */
 .login-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 20px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
-.login-container h2 {
-    color: white; /* White font */
+h2 {
+    text-align: center; /* Centered heading */
 }
 
-.login-container input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 90%;
+/* Input styles */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin: 10px 0; /* Margin */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
 }
 
-.login-container .btn {
-    background-color: teal; /* Teal green button */
-    color: white; /* White font */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
+/* Button styles for login */
+button {
+    background-color: teal; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
 }
 
-.login-container .btn:hover {
-    background-color: #008080; /* Darker teal on hover */
+/* Hover effect for login button */
+button:hover {
+    background-color: #007B7F; /* Darker teal on hover */
+}
+
+/* Sign up link styles */
+.signup-link {
+    text-align: center; /* Centered link */
+    margin-top: 10px; /* Margin */
+}
+
+.signup-link a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
 }
