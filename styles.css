@@ -1,80 +1,68 @@
 body {
-    background-color: #f0eb96; /* Bright Yellow Background */
-    color: #333; /* Dark text for contrast */
-    font-family: 'Poppins', sans-serif; /* Main font for body text */
     margin: 0;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0eb96; /* Bright background */
+    color: #000;
 }
 
 .banner {
+    text-align: center;
+    background-color: #000; /* Black background for the banner */
+    color: #fff; /* White font */
     padding: 20px;
 }
 
 h1 {
-    font-family: 'Lobster', cursive; /* Bolder, creative font for the header */
-    font-size: 3rem; /* Adjust size as needed */
-    color: #2E7D32; /* Darker shade for emphasis */
+    font-size: 3em;
+    color: #3cb371; /* Teal green */
 }
 
-h2 {
-    font-family: 'Poppins', sans-serif; /* Use Poppins for subheadings */
-    font-weight: 700; /* Bold font weight */
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-nav {
-    margin: 20px 0;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 nav a {
-    font-family: 'Poppins', sans-serif; /* Bold font for navigation links */
-    font-weight: 700; /* Make links bold */
     text-decoration: none;
-    margin: 0 15px;
-    color: #2E7D32; /* Link color */
-    transition: transform 0.3s;
+    color: orange; /* Orange buttons */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    transform: scale(1.1); /* Scales the element on hover */
-    color: #FF9800; /* Change color on hover */
+    color: #ff4500; /* Darker orange on hover */
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .menu-item {
-    display: inline-block;
-    margin: 20px;
+    width: 30%;
     text-align: center;
+    margin: 10px 0;
 }
 
 .menu-item img {
-    width: 200px;
+    width: 100%; /* Responsive image */
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    animation: zoom 0.5s ease;
 }
 
-.menu-item img:hover {
-    transform: scale(1.05); /* Image scale on hover */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #2E7D32; /* Darker footer background */
-    color: white;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards; /* Fades in the element */
-}
-
-@keyframes fadeIn {
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
     to {
-        opacity: 1;
+        transform: scale(1.05);
     }
 }
 
@@ -82,4 +70,49 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.login-page {
+    background-color: navy; /* Navy blue background for login */
+}
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.login-container h2 {
+    color: white; /* White font */
+}
+
+.login-container input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.login-container .btn {
+    background-color: teal; /* Teal green button */
+    color: white; /* White font */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.login-container .btn:hover {
+    background-color: #008080; /* Darker teal on hover */
 }
