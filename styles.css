@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Caveat', cursive;
     background-color: black;
     color: white;
 }
@@ -18,7 +18,7 @@ header {
 }
 
 .healthify-description {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Lobster', cursive;
     font-size: 1.5rem;
     color: white;
     background-color: #F0EB96; /* Light orange background */
