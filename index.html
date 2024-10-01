@@ -4,75 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthify</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        .banner {
+            background-color: #f0eb96;
+            padding: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            animation: slide-in 1s ease;
+        }
+        @keyframes slide-in {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .menu-card {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .menu-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        .menu-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .add-to-cart {
+            background-color: orange;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: darkorange;
+        }
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="banner">
-        <h1>Healthify</h1>
-        <p>Fuel your fitness journey with every bite! At Healthify, we believe healthy eating should be as delicious as it is nutritious. Dive into our fresh menu, crafted to energize your day and tantalize your taste buds. Let's make healthy living a delightful adventure together!</p>
+    <header>
+        <h1>Welcome to Healthify</h1>
+        <div class="banner">
+            Fuel your fitness journey with every bite! At Healthify, we believe healthy eating should be as delicious as it is nutritious. Dive into our fresh menu, crafted to energize your day and tantalize your taste buds. Let's make healthy living a delightful adventure together!
+        </div>
+    </header>
+    <div class="menu-container">
+        <div class="menu-card">
+            <img src="multigrain-wrap.jpg" alt="Multigrain Wraps">
+            <h3>Multigrain Wraps</h3>
+            <p>Price: Rs. 169</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="multigrain-sandwiches.jpg" alt="Multigrain Sandwiches">
+            <h3>Multigrain Sandwiches</h3>
+            <p>Price: Rs. 179</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
+            <h3>High Protein Quinoa Salad</h3>
+            <p>Price: Rs. 139</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
+            <h3>Chicken Teriyaki Salad</h3>
+            <p>Price: Rs. 249</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
+            <h3>Chicken Caesar Salad</h3>
+            <p>Price: Rs. 259</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="protein-smoothie.jpg" alt="Protein Smoothie">
+            <h3>Protein Smoothie</h3>
+            <p>Price: Rs. 149</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="oatmeal-pancakes.jpg" alt="Oats Pancakes">
+            <h3>Oats Pancakes</h3>
+            <p>Price: Rs. 239</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="crunchy-salad.jpg" alt="Crunchy Salad">
+            <h3>Crunchy Salad</h3>
+            <p>Price: Rs. 119</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-card">
+            <img src="tofu-bowl.jpg" alt="Crispy Tofu Bowl">
+            <h3>Crispy Tofu Bowl</h3>
+            <p>Price: Rs. 149</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
     </div>
-    
-    <nav>
-        <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="#" onclick="promptLogin()">Menu</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <div class="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <img src="multigrain_wrap.jpg" alt="Multigrain Wrap">
-            <h3>Multigrain Wraps - Rs. 169</h3>
-        </div>
-        <div class="menu-item">
-            <img src="multigrain_sandwiches.jpg" alt="Multigrain Sandwich">
-            <h3>Multigrain Sandwiches - Rs. 179</h3>
-        </div>
-        <div class="menu-item">
-            <img src="high-protein-quinoa_salad.jpg" alt="High Protein Quinoa Salad">
-            <h3>High Protein Quinoa Salad - Rs. 139</h3>
-        </div>
-        <div class="menu-item">
-            <img src="chicken_teriyaki_salad.jpg" alt="Chicken Teriyaki Salad">
-            <h3>Chicken Teriyaki Salad - Rs. 249</h3>
-        </div>
-        <div class="menu-item">
-            <img src="chicken_caesar_salad.jpg" alt="Chicken Caesar Salad">
-            <h3>Chicken Caesar Salad - Rs. 259</h3>
-        </div>
-        <div class="menu-item">
-            <img src="protein_smoothie.jpg" alt="Protein Smoothie">
-            <h3>Protein Smoothie (Blueberry, Chocolate, Vanilla, Almond, Banana) - Rs. 149</h3>
-        </div>
-        <div class="menu-item">
-            <img src="oatmeal_pancakes.jpg" alt="Oats Pancakes">
-            <h3>Oats Pancakes - Rs. 239</h3>
-        </div>
-        <div class="menu-item">
-            <img src="crunchy_salad.jpg" alt="Crunchy Salad">
-            <h3>Crunchy Salad - Rs. 119</h3>
-        </div>
-        <div class="menu-item">
-            <img src="tofu_bowl.jpg" alt="Crispy Tofu Bowl">
-            <h3>Crispy Tofu Bowl - Rs. 149</h3>
-        </div>
-    </div>
-
     <div class="chatbot">
-        <iframe
-            allow="microphone;"
-            width="350"
-            height="430"
-            src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
-        </iframe>
+        <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177"></iframe>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Healthify. All rights reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
