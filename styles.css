@@ -1,161 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body {
-    margin: 0;
+    background-color: black;
+    color: white;
     font-family: 'Arial', sans-serif;
-    background-color: black; /* Main background color */
-    color: white; /* Main text color */
-}
-
-header {
-    background-color: #2e2e2e; /* Header background */
-    padding: 20px;
-    text-align: center;
-}
-
-.welcome-title {
-    font-family: 'Pacifico', cursive; /* Creative font */
-    font-size: 3rem; /* Font size */
-    animation: fadeIn 1.5s ease-in-out, bounce 2s infinite; /* Apply animations */
-    margin: 20px 0; /* Margin for spacing */
-}
-
-nav ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    font-size: 3em;
+    color: white;
+    animation: fadeIn 2s;
+}
+
+.description {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    margin-top: 20px;
 }
 
 nav a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make links bold */
+    color: orange;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .menu-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: center;
 }
 
-.menu-card {
-    background-color: #3c3c3c; /* Card background */
+.menu-item {
+    background-color: #222;
+    border: 2px solid orange;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
+    margin: 15px;
+    padding: 10px;
     text-align: center;
-    width: 200px; /* Set width for cards */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
 }
 
-.menu-card img {
-    width: 100%; /* Responsive image */
-    border-radius: 10px; /* Round corners */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.menu-card h3 {
-    margin: 10px 0; /* Margin for headings */
-}
-
-.menu-card p {
-    margin: 5px 0; /* Margin for price */
+.menu-item h3 {
+    font-size: 1.5em;
 }
 
 .add-to-cart {
-    background-color: orange; /* Add to Cart button color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    padding: 10px; /* Padding for button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth background change */
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .add-to-cart:hover {
-    background-color: darkorange; /* Change color on hover */
+    background-color: yellow;
+    transform: scale(1.05);
 }
 
-.chatbot {
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Distance from bottom */
-    right: 20px; /* Distance from right */
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.help-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nutribuddy, .contact-us {
+    width: 45%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
 }
 
 footer {
-    text-align: center; /* Center footer text */
-    padding: 20px; /* Footer padding */
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Login Page Styles */
-.login-page {
-    background-color: navy; /* Navy background for login page */
-}
-
-.login-container {
-    width: 300px; /* Container width */
-    margin: 100px auto; /* Center the container */
-    padding: 20px; /* Padding */
-    background-color: white; /* White background for form */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
-
-.login-container h1 {
-    text-align: center; /* Center title */
-}
-
-.login-container label {
-    display: block; /* Block display for labels */
-    margin: 10px 0 5px; /* Margin for spacing */
-}
-
-.login-container input {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding */
-    margin-bottom: 20px; /* Margin below inputs */
-    border: 1px solid #ccc; /* Border */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.login-button {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding */
-    background-color: orange; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-}
-
-.login-button:hover {
-    background-color: darkorange; /* Change color on hover */
-}
-
-/* Fade-in animation */
 @keyframes fadeIn {
-    0% {
-        opacity: 0; /* Start transparent */
-        transform: translateY(-20px); /* Start slightly above */
+    from {
+        opacity: 0;
     }
-    100% {
-        opacity: 1; /* Fully opaque */
-        transform: translateY(0); /* End at normal position */
-    }
-}
-
-/* Bounce animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0); /* Normal position */
-    }
-    40% {
-        transform: translateY(-10px); /* Up */
-    }
-    60% {
-        transform: translateY(-5px); /* Down */
+    to {
+        opacity: 1;
     }
 }
