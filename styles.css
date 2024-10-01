@@ -1,160 +1,85 @@
-/* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    background-color: #FFEB3B; /* Bright Yellow Background */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Poppins', sans-serif; /* Main font for body text */
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Light background color */
-    color: #333;
 }
 
 header {
-    background-color: #3A506B; /* Modern dark blue */
-    color: white;
-    padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.banner {
+    padding: 20px;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
+h1 {
+    font-family: 'Lobster', cursive; /* Bolder, creative font for the header */
+    font-size: 3rem; /* Adjust size as needed */
+    color: #2E7D32; /* Darker shade for emphasis */
 }
 
 h2 {
-    text-align: center;
-    margin: 2rem 0;
-    color: #333;
+    font-family: 'Poppins', sans-serif; /* Use Poppins for subheadings */
+    font-weight: 700; /* Bold font weight */
 }
 
-/* Menu Section */
-.menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2rem;
-    gap: 1.5rem;
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif; /* Bold font for navigation links */
+    font-weight: 700; /* Make links bold */
+    text-decoration: none;
+    margin: 0 15px;
+    color: #2E7D32; /* Link color */
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Scales the element on hover */
+    color: #FF9800; /* Change color on hover */
 }
 
 .menu-item {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    display: inline-block;
+    margin: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
 }
 
 .menu-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ensures images maintain proportion */
-    border-radius: 12px 12px 0 0;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.menu-item h3 {
-    color: #3A506B;
-    margin: 1rem 0;
+.menu-item img:hover {
+    transform: scale(1.05); /* Image scale on hover */
 }
 
-.menu-item p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Button Styles */
-button {
-    background-color: #5BC0BE;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 1rem;
-}
-
-button:hover {
-    background-color: #0E9AA7;
-}
-
-/* Cart, Checkout, Order History, Login, and Contact Sections */
-#cart, #order-history, #checkout, #contact, #login {
-    padding: 2rem;
-    margin: 2rem auto;
-    background-color: white;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#cart h2, #order-history h2, #checkout h2, #contact h2, #login h2 {
-    color: #3A506B;
-}
-
-#cart-items, #order-list {
-    margin-top: 1rem;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 1rem 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-form button {
-    width: 100%;
-    background-color: #3A506B;
-}
-
-/* Footer Section */
 footer {
-    background-color: #3A506B;
-    color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 10px 0;
+    background-color: #2E7D32; /* Darker footer background */
+    color: white;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fades in the element */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.chatbot {
     position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Contact Form Section */
-form textarea {
-    resize: none;
-    height: 150px;
-}
-
-iframe {
-    border: 2px solid #3A506B;
-    border-radius: 15px;
-    margin: 20px auto;
-    display: block;
-}
-
-/* Ensure consistency in text alignment */
-h3, p {
-    padding: 0 1rem;
+    bottom: 20px;
+    right: 20px;
 }
