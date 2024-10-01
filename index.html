@@ -4,97 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthify</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="banner fade-in">
-            <h1>Welcome to Healthify!</h1>
-            <p>Fuel your fitness journey with every bite!</p>
-        </div>
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#order-history">Order History</a>
-            <a href="#login">Login</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
-    </header>
+    <div class="banner">
+        <h1>Healthify</h1>
+        <p>Fuel your fitness journey with every bite! At Healthify, we believe healthy eating should be as delicious as it is nutritious. Dive into our fresh menu, crafted to energize your day and tantalize your taste buds. Let's make healthy living a delightful adventure together!</p>
+    </div>
     
-    <main>
-        <section id="menu">
-            <h2>Our Menu</h2>
-            <div class="menu-item">
-                <img src="multigrain-wrap.jpg" alt="Multigrain Wraps">
-                <h3>Multigrain Wraps</h3>
-                <p>Price: Rs. 169</p>
-            </div>
-            <div class="menu-item">
-                <img src="multigrain-sandwiches.jpg" alt="Multigrain Sandwiches">
-                <h3>Multigrain Sandwiches</h3>
-                <p>Price: Rs. 179</p>
-            </div>
-            <div class="menu-item">
-                <img src="high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
-                <h3>High Protein Quinoa Salad</h3>
-                <p>Price: Rs. 139</p>
-            </div>
-            <div class="menu-item">
-                <img src="chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
-                <h3>Chicken Teriyaki Salad</h3>
-                <p>Price: Rs. 249</p>
-            </div>
-            <div class="menu-item">
-                <img src="chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
-                <h3>Chicken Caesar Salad</h3>
-                <p>Price: Rs. 259</p>
-            </div>
-            <div class="menu-item">
-                <img src="protein-smoothie.jpg" alt="Protein Smoothie">
-                <h3>Protein Smoothie</h3>
-                <p>Price: Rs. 149</p>
-            </div>
-            <div class="menu-item">
-                <img src="oatmeal-pancakes.jpg" alt="Oats Pancakes">
-                <h3>Oats Pancakes</h3>
-                <p>Price: Rs. 239</p>
-            </div>
-            <div class="menu-item">
-                <img src="crunchy-salad.jpg" alt="Crunchy Salad">
-                <h3>Crunchy Salad</h3>
-                <p>Price: Rs. 119</p>
-            </div>
-            <div class="menu-item">
-                <img src="tofu-bowl.jpg" alt="Tofu Bowl">
-                <h3>Crispy Tofu Bowl</h3>
-                <p>Price: Rs. 149</p>
-            </div>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#" onclick="promptLogin()">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-        <section id="order-history">
-            <h2>Your Order History</h2>
-            <!-- Order history will be displayed here -->
-        </section>
-
-        <section id="login">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>For inquiries, please reach out to us via email at contact@healthify.com.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Healthify. All Rights Reserved.</p>
-    </footer>
+    <div class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="multigrain_wrap.jpg" alt="Multigrain Wrap">
+            <h3>Multigrain Wraps - Rs. 169</h3>
+        </div>
+        <div class="menu-item">
+            <img src="multigrain_sandwiches.jpg" alt="Multigrain Sandwich">
+            <h3>Multigrain Sandwiches - Rs. 179</h3>
+        </div>
+        <div class="menu-item">
+            <img src="high-protein-quinoa_salad.jpg" alt="High Protein Quinoa Salad">
+            <h3>High Protein Quinoa Salad - Rs. 139</h3>
+        </div>
+        <div class="menu-item">
+            <img src="chicken_teriyaki_salad.jpg" alt="Chicken Teriyaki Salad">
+            <h3>Chicken Teriyaki Salad - Rs. 249</h3>
+        </div>
+        <div class="menu-item">
+            <img src="chicken_caesar_salad.jpg" alt="Chicken Caesar Salad">
+            <h3>Chicken Caesar Salad - Rs. 259</h3>
+        </div>
+        <div class="menu-item">
+            <img src="protein_smoothie.jpg" alt="Protein Smoothie">
+            <h3>Protein Smoothie (Blueberry, Chocolate, Vanilla, Almond, Banana) - Rs. 149</h3>
+        </div>
+        <div class="menu-item">
+            <img src="oatmeal_pancakes.jpg" alt="Oats Pancakes">
+            <h3>Oats Pancakes - Rs. 239</h3>
+        </div>
+        <div class="menu-item">
+            <img src="crunchy_salad.jpg" alt="Crunchy Salad">
+            <h3>Crunchy Salad - Rs. 119</h3>
+        </div>
+        <div class="menu-item">
+            <img src="tofu_bowl.jpg" alt="Crispy Tofu Bowl">
+            <h3>Crispy Tofu Bowl - Rs. 149</h3>
+        </div>
+    </div>
 
     <div class="chatbot">
         <iframe
@@ -104,5 +68,11 @@
             src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
         </iframe>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Healthify. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
