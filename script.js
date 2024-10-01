@@ -3,47 +3,47 @@ const menuItems = [
     {
         name: "Multigrain Wraps",
         price: 169,
-        image: "images/multigrain-wraps.jpg",
+        image: "multigrain-wraps.jpg",
     },
     {
         name: "Multigrain Sandwiches",
         price: 179,
-        image: "images/multigrain-sandwiches.jpg",
+        image: "multigrain-sandwiches.jpg",
     },
     {
         name: "High Protein Quinoa Salad",
         price: 139,
-        image: "images/high-protein-quinoa-salad.jpg",
+        image: "high-protein-quinoa-salad.jpg",
     },
     {
         name: "Chicken Teriyaki Salad",
         price: 249,
-        image: "images/chicken-teriyaki-salad.jpg",
+        image: "chicken-teriyaki-salad.jpg",
     },
     {
         name: "Chicken Caesar Salad",
         price: 259,
-        image: "images/chicken-caesar-salad.jpg",
+        image: "chicken-caesar-salad.jpg",
     },
     {
         name: "Protein Smoothie",
         price: 149,
-        image: "images/protein-smoothie.jpg",
+        image: "protein-smoothie.jpg",
     },
     {
         name: "Oats Pancakes",
         price: 239,
-        image: "images/oats-pancakes.jpg",
+        image: "oatmeal-pancakes.jpg",
     },
     {
         name: "Crunchy Salad",
         price: 119,
-        image: "images/crunchy-salad.jpg",
+        image: "crunchy-salad.jpg",
     },
     {
         name: "Crispy Tofu Bowl",
         price: 149,
-        image: "images/crispy-tofu-bowl.jpg",
+        image: "tofu-bowl.jpg",
     },
 ];
 
