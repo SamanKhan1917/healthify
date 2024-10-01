@@ -3,116 +3,109 @@ const menuItems = [
     {
         name: "Multigrain Wraps",
         price: 169,
-        image: "images/multigrain-wrap.jpg",
-        quantity: 0
+        image: "images/multigrain-wraps.jpg",
     },
     {
         name: "Multigrain Sandwiches",
         price: 179,
-        image: "images/multigrain-sandwich.jpg",
-        quantity: 0
+        image: "images/multigrain-sandwiches.jpg",
     },
     {
         name: "High Protein Quinoa Salad",
         price: 139,
         image: "images/high-protein-quinoa-salad.jpg",
-        quantity: 0
     },
     {
         name: "Chicken Teriyaki Salad",
         price: 249,
         image: "images/chicken-teriyaki-salad.jpg",
-        quantity: 0
     },
     {
         name: "Chicken Caesar Salad",
         price: 259,
         image: "images/chicken-caesar-salad.jpg",
-        quantity: 0
     },
     {
         name: "Protein Smoothie",
         price: 149,
         image: "images/protein-smoothie.jpg",
-        quantity: 0
     },
     {
         name: "Oats Pancakes",
         price: 239,
         image: "images/oats-pancakes.jpg",
-        quantity: 0
     },
     {
         name: "Crunchy Salad",
         price: 119,
         image: "images/crunchy-salad.jpg",
-        quantity: 0
     },
     {
         name: "Crispy Tofu Bowl",
         price: 149,
         image: "images/crispy-tofu-bowl.jpg",
-        quantity: 0
-    }
+    },
 ];
 
+// Cart to hold selected items
 let cart = [];
 
-// Event listener for the login form
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const username = event.target[0].value;
-    const password = event.target[1].value;
-
-    // Simple validation for demonstration
-    if (username === "user" && password === "password") {
-        alert("Login successful!");
-        // Redirect or handle post-login functionality here
+// Function to prompt user login
+function promptLogin() {
+    const isLoggedIn = confirm("You need to log in to access the menu. Would you like to log in or continue as a guest?");
+    if (isLoggedIn) {
+        window.location.href = 'login.html'; // Redirect to login page
     } else {
-        alert("Invalid credentials, please try again.");
+        continueAsGuest(); // Allow browsing as a guest
+    }
+}
+
+// Function for continuing as a guest
+function continueAsGuest() {
+    alert("Welcome, guest! You can browse the menu but some features may be limited.");
+}
+
+// Function to add item to cart
+function addToCart(item) {
+    cart.push(item);
+    alert(`${item.name} has been added to your cart.`);
+}
+
+// Function to display menu items
+function displayMenu() {
+    const menuContainer = document.querySelector('.menu');
+    menuItems.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'menu-item';
+
+        itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>Price: ₹${item.price}</p>
+            <button class="add-to-cart" onclick="addToCart(${JSON.stringify(item)})">Add to Cart</button>
+        `;
+
+        menuContainer.appendChild(itemDiv);
+    });
+}
+
+// Optional: Handle the login form submission
+document.getElementById("login-form")?.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const username = this[0].value; // Get username
+    const password = this[1].value; // Get password
+
+    // Here you can add logic for authentication, like calling an API
+    if (username === "user" && password === "pass") { // Simple validation
+        alert("Login successful!");
+        window.location.href = 'index.html'; // Redirect to main page
+    } else {
+        alert("Invalid credentials, please try again."); // Show error for invalid login
     }
 });
 
-// Function to add an item to the cart
-function addToCart(itemName) {
-    const item = menuItems.find(menuItem => menuItem.name === itemName);
-    if (item) {
-        const cartItem = cart.find(cartItem => cartItem.name === itemName);
-        if (cartItem) {
-            cartItem.quantity++;
-        } else {
-            cart.push({ ...item, quantity: 1 });
-        }
-        alert(`${itemName} added to cart!`);
-    }
-}
-
-// Function to display cart items
-function displayCart() {
-    let cartDetails = "Your Cart:\n";
-    cart.forEach(item => {
-        cartDetails += `${item.name} - Rs. ${item.price} x ${item.quantity}\n`;
-    });
-    if (cart.length === 0) {
-        cartDetails += "Your cart is empty.";
-    }
-    alert(cartDetails);
-}
-
-// Function to handle order history (dummy data for now)
-function displayOrderHistory() {
-    alert("Order History:\n1. Multigrain Wraps - Rs. 169\n2. Chicken Caesar Salad - Rs. 259");
-}
-
-// Sample usage (you can bind these functions to buttons in your HTML)
-document.addEventListener("DOMContentLoaded", () => {
-    // You can also create buttons dynamically and add event listeners to them
-    // Example button for adding items to cart
-    const buttonContainer = document.getElementById("menu");
-    menuItems.forEach(item => {
-        const button = document.createElement("button");
-        button.innerText = `Add ${item.name} to Cart`;
-        button.addEventListener("click", () => addToCart(item.name));
-        buttonContainer.appendChild(button);
-    });
+// Initialize menu display on page load
+document.addEventListener('DOMContentLoaded', () => {
+    displayMenu();
 });
