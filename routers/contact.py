@@ -1,10 +1,22 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from .. import crud, database
+from models import ContactMessage
+from schemas import ContactMessageCreate
+from database import SessionLocal
 
 router = APIRouter()
 
-@router.post("/contact")
-def submit_contact(name: str, message: str, db: Session = Depends(database.get_db)):
-    crud.submit_contact_form(db, name=name, message=message)
-    return {"message": f"Thank you, {name}. Your message has been received!"}
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+@router.post("/contact/")
+def create_contact_message(message: ContactMessageCreate, db: Session = Depends(get_db)):
+    new_message = ContactMessage(name=message.name, message=message.message)
+    db.add(new_message)
+    db.commit()
+    db.refresh(new_message)
+    return new_message
