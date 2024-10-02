@@ -1,17 +1,12 @@
 from fastapi import FastAPI
-from .database import Base, engine
-from .routers import cart, contact, webhook
+from database import engine
+from models import Base
+from routers import user, menu, contact
 
-# Initialize the database
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Include the routers
-app.include_router(cart.router, prefix="/cart", tags=["Cart"])
-app.include_router(contact.router, prefix="/contact", tags=["Contact"])
-app.include_router(webhook.router, prefix="/webhook", tags=["Webhook"])
-
-@app.get("/")
-def root():
-    return {"message": "Welcome to Healthify!"}
+app.include_router(user.router, prefix="/users", tags=["users"])
+app.include_router(menu.router, prefix="/menu", tags=["menu"])
+app.include_router(contact.router, prefix="/contact", tags=["contact"])
