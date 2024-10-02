@@ -3,119 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthify</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Trebuchet+MS&family=Chewy&family=Hallo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
+    <title>Healthify</title>
 </head>
 <body>
     <header>
-        <h1 class="main-title">Welcome to Healthify</h1>
-        <p class="healthify-description">Fuel your fitness journey with every bite! At Healthify, we believe healthy eating should be as delicious as it is nutritious. Dive into our fresh menu, crafted to energize your day and tantalize your taste buds. Let's make healthy living a delightful adventure together!</p>
+        <h1 class="welcome-title">Welcome to Healthify</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order-history">Order History</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <main>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container">
+                <div class="menu-card">
+                    <img src="multigrain-wrap.jpg" alt="Multigrain Wrap">
+                    <h3>Multigrain Wrap</h3>
+                    <p>Price: Rs. 169</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="multigrain-sandwiches.jpg" alt="Multigrain Sandwich">
+                    <h3>Multigrain Sandwich</h3>
+                    <p>Price: Rs. 179</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
+                    <h3>High Protein Quinoa Salad</h3>
+                    <p>Price: Rs. 139</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
+                    <h3>Chicken Teriyaki Salad</h3>
+                    <p>Price: Rs. 249</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
+                    <h3>Chicken Caesar Salad</h3>
+                    <p>Price: Rs. 259</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="protein-smoothie.jpg" alt="Protein Smoothie">
+                    <h3>Protein Smoothie</h3>
+                    <p>Price: Rs. 149</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="oatmeal-pancakes.jpg" alt="Oats Pancakes">
+                    <h3>Oats Pancakes</h3>
+                    <p>Price: Rs. 239</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="crunchy-salad.jpg" alt="Crunchy Salad">
+                    <h3>Crunchy Salad</h3>
+                    <p>Price: Rs. 119</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="menu-card">
+                    <img src="tofu-bowl.jpg" alt="Crispy Tofu Bowl">
+                    <h3>Crispy Tofu Bowl</h3>
+                    <p>Price: Rs. 149</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
 
-    <nav>
-        <ul>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#order-history">Order History</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
-            <li><a href="#help">Help</a></li>
-        </ul>
-    </nav>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+        </section>
 
-    <section id="menu">
-        <h2 class="menu-title">Our Menu</h2>
-        <div class="menu-container">
-            <div class="menu-item">
-                <img src="multigrain-wrap.jpg" alt="Multigrain Wrap">
-                <h3>Multigrain Wraps</h3>
-                <p>Price: Rs. 169</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="multigrain-sandwiches.jpg" alt="Multigrain Sandwich">
-                <h3>Multigrain Sandwiches</h3>
-                <p>Price: Rs. 179</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="high-protein-quinoa-salad.jpg" alt="High Protein Quinoa Salad">
-                <h3>High Protein Quinoa Salad</h3>
-                <p>Price: Rs. 139</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="chicken-teriyaki-salad.jpg" alt="Chicken Teriyaki Salad">
-                <h3>Chicken Teriyaki Salad</h3>
-                <p>Price: Rs. 249</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="chicken-caesar-salad.jpg" alt="Chicken Caesar Salad">
-                <h3>Chicken Caesar Salad</h3>
-                <p>Price: Rs. 259</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="protein-smoothie.jpg" alt="Protein Smoothie">
-                <h3>Protein Smoothie</h3>
-                <p>Price: Rs. 149</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="oatmeal-pancakes.jpg" alt="Oats Pancakes">
-                <h3>Oats Pancakes</h3>
-                <p>Price: Rs. 239</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="crunchy-salad.jpg" alt="Crunchy Salad">
-                <h3>Crunchy Salad</h3>
-                <p>Price: Rs. 119</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="tofu-bowl.jpg" alt="Crispy Tofu Bowl">
-                <h3>Crispy Tofu Bowl</h3>
-                <p>Price: Rs. 149</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <div class="chatbot">
+            <iframe
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177">
+            </iframe>
         </div>
-    </section>
-
-    <section id="order-history">
-        <h2>Order History</h2>
-        <!-- Order history will be populated here -->
-    </section>
-
-    <section id="contact-us">
-        <h2>Contact Us</h2>
-        <p>Email: support-healthify@gmail.com</p>
-        <p>Phone: +917692936180</p>
-        <p>Address: 3rd Floor, Fitness 365 Gym, above Ondoor, Janki Nagar, Chuna Bhatti, Bhopal, Madhya Pradesh 462016</p>
-    </section>
-
-    <section id="help">
-        <h2>Help Section</h2>
-        <div class="nutribuddy-section">
-            <h3>Meet NutriBuddy</h3>
-            <p>AI assistant for all your queries!</p>
-            <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/d4cea888-ce0e-45dc-a642-20c0c43af177"></iframe>
-        </div>
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
+    </main>
+    
     <footer>
         <p>&copy; 2024 Healthify. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
