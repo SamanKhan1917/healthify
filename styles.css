@@ -1,39 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body {
     margin: 0;
-    font-family: 'Caveat', cursive;
-    background-color: black;
-    color: white;
+    font-family: 'Arial', sans-serif;
+    background-color: black; /* Main background color */
+    color: white; /* Main text color */
 }
 
 header {
-    text-align: center;
+    background-color: #2e2e2e; /* Header background */
     padding: 20px;
-}
-
-.main-title {
-    font-family: 'Pacifico', cursive;
-    font-size: 3rem;
-    animation: fadeIn 1.5s ease-in-out, bounce 2s infinite;
-    margin: 20px 0;
-}
-
-.healthify-description {
-    font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
-    color: white;
-    background-color: #F0EB96; /* Light orange background */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-nav {
     text-align: center;
-    background-color: #333;
-    padding: 10px 0;
+}
+
+.welcome-title {
+    font-family: 'Pacifico', cursive; /* Creative font */
+    font-size: 3rem; /* Font size */
+    animation: fadeIn 1.5s ease-in-out, bounce 2s infinite; /* Apply animations */
+    margin: 20px 0; /* Margin for spacing */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -43,121 +30,132 @@ nav ul li {
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #F0EB96; /* Light orange on hover */
-}
-
-.menu-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 20px;
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
 }
 
 .menu-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-.menu-item {
-    background-color: #444;
-    border-radius: 8px;
+.menu-card {
+    background-color: #3c3c3c; /* Card background */
+    border-radius: 10px;
+    padding: 15px;
     margin: 10px;
-    padding: 10px;
     text-align: center;
-    width: 200px;
-    transition: transform 0.3s;
+    width: 200px; /* Set width for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
-.menu-item:hover {
-    transform: scale(1.05);
+.menu-card img {
+    width: 100%; /* Responsive image */
+    border-radius: 10px; /* Round corners */
 }
 
-.menu-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.menu-card h3 {
+    margin: 10px 0; /* Margin for headings */
 }
 
-button.add-to-cart {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.menu-card p {
+    margin: 5px 0; /* Margin for price */
 }
 
-button.add-to-cart:hover {
-    background-color: darkorange; /* Darker orange on hover */
+.add-to-cart {
+    background-color: orange; /* Add to Cart button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.add-to-cart:hover {
+    background-color: darkorange; /* Change color on hover */
+}
+
+.chatbot {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+    text-align: center; /* Center footer text */
+    padding: 20px; /* Footer padding */
 }
 
-.contact-form {
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: left;
+/* Login Page Styles */
+.login-page {
+    background-color: navy; /* Navy background for login page */
 }
 
-.contact-form label {
-    display: block;
-    margin: 10px 0 5px;
+.login-container {
+    width: 300px; /* Container width */
+    margin: 100px auto; /* Center the container */
+    padding: 20px; /* Padding */
+    background-color: white; /* White background for form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login-container h1 {
+    text-align: center; /* Center title */
 }
 
-.contact-form button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
+.login-container label {
+    display: block; 
+    margin: 10px 0 5px; 
 }
 
-.contact-form button:hover {
-    background-color: darkorange; /* Darker orange on hover */
+.login-container input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin-bottom: 20px; /* Margin below inputs */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
 }
 
-/* Animation Styles */
+.login-button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    background-color: orange; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.login-button:hover {
+    background-color: darkorange; 
+}
+
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
+    0% {
+        opacity: 0; 
+        transform: translateY(-20px); 
     }
-    to {
-        opacity: 1;
+    100% {
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
+        transform: translateY(0); 
     }
     40% {
-        transform: translateY(-30px);
+        transform: translateY(-10px); 
     }
     60% {
-        transform: translateY(-15px);
+        transform: translateY(-5px);
     }
 }
