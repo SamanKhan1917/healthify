@@ -14,4 +14,4 @@ app.include_router(webhook.router, prefix="/webhook", tags=["Webhook"])
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to Healthify's backend!"}
+    return {"message": "Welcome to Healthify!"}
